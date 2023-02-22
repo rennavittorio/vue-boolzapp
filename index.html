@@ -15,9 +15,47 @@
 </head>
 <body class="body">
 
-    <div id="app" class="boolzap container my-5">
+    <div id="app" class="boolzap container my-5 overflow-hidden">
 
-        
+        <div class="row">
+            <div class="boolzap__navbar col-4 d-flex flex-column">
+                
+                <div class="user-bar flex-shrink-0">
+                    user
+                </div>
+
+                <div class="notification-banner flex-shrink-0">
+                    notifications
+                </div>
+
+                <div class="search-bar flex-shrink-0">
+                    search...
+                </div>
+
+                <div class="chat__navbar flex-grow-1 overflow-y-scroll">
+                    receivers
+                </div>
+
+            </div>
+
+
+
+            <div class="boolzap__chat col d-flex flex-column">
+                
+                <div class="user-bar flex-shrink-0">
+                    receiver
+                </div>
+
+                <div class="chat-view flex-grow-1 overflow-y-scroll">
+                    chat preview
+                </div>
+
+                <div class="chat-input flex-shrink-0">
+                    input here...
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
