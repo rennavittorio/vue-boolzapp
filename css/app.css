@@ -69,10 +69,12 @@ i:not(.notification__icon>i) {
 
 .chat__navbar {
     padding: 15px 10px;
+    background-color: #fff;
 }
 
 .chat__navbar .user-bar__profile {
     padding: 10px 0;
+    background-color: #fff;
 }
 
 .chat__navbar .profile__img {
@@ -89,3 +91,45 @@ i:not(.notification__icon>i) {
     top: 0;
     right: 0;
 }
+
+.chat-view {
+    background-image: url(../assets/wa_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* messages */
+.messages-container {
+    width: auto;
+    height: 100%;
+
+}
+
+
+.message__cloud {
+    padding: 20px 20px 50px;
+    margin: 40px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px #D9DBD4;
+    background-color: #fff;
+    width: 300px;
+    position: relative;
+}
+
+.message__cloud .message__time {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.message__cloud .message__option {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.sent__message {
+    margin-left: auto;
+    background-color: #D5F9BA;
+}
+
