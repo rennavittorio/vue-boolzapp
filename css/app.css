@@ -17,6 +17,10 @@ a {
     color: currentColor;
 }
 
+i:not(.notification__icon>i) {
+    color: #b0b0b0 ;
+}
+
 .boolzap {
     border: 3px solid #333;
     background-color: #eee;
@@ -58,5 +62,9 @@ a {
     border-radius: 999px;
     background-color: #D9DBD4;
     color: #8EDAFC;
+}
+
+.lateral__icon {
+    padding: 20px;
 }
 
