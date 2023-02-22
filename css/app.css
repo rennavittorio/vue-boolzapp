@@ -22,7 +22,7 @@ i:not(.notification__icon>i) {
 }
 
 .boolzap {
-    border: 3px solid #333;
+    /* border: 3px solid #333; */
     background-color: #eee;
 
 }
@@ -42,9 +42,8 @@ i:not(.notification__icon>i) {
     color: #333;
 }
 
-.boolzap__navbar > *,
-.boolzap__chat > * {
-    border: 2px dashed cornflowerblue;
+.boolzap__chat {
+    border-left: 2px solid #D9DBD4;
 }
 
 .profile__img {
@@ -68,3 +67,25 @@ i:not(.notification__icon>i) {
     padding: 20px;
 }
 
+.chat__navbar {
+    padding: 15px 10px;
+}
+
+.chat__navbar .user-bar__profile {
+    padding: 10px 0;
+}
+
+.chat__navbar .profile__img {
+    width: 75px;
+    margin-right: 10px;
+}
+
+.chat__navbar .profile__name {
+    position: relative;
+}
+
+.chat__navbar .receiver__time {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

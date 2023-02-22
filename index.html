@@ -13,9 +13,9 @@
     <title>Boolzap</title>
 
 </head>
-<body class="body">
+<body class="body" id="app">
 
-    <div id="app" class="boolzap container my-5 overflow-hidden p-0">
+    <div class="boolzap container my-5 overflow-hidden p-0">
 
         <div class="row g-0">
             <div class="boolzap__navbar col-4 d-flex flex-column">
@@ -25,7 +25,7 @@
 
                     <div class="user-bar__profile d-flex align-items-center flex-grow-1 px-2">
                         <div class="profile__img">
-                            <img src="./assets/woman1.png" alt="">
+                            <img src="./assets/woman2.png" alt="">
                         </div>
                         <div class="profile__name fw-bold">
                             Sofia
@@ -72,7 +72,29 @@
 
                 <!-- chat-preview section -->
                 <div class="chat__navbar flex-grow-1 overflow-y-scroll">
-                    receivers
+                    
+                    <!-- prototype card -->
+                    <div 
+                    class="user-bar__profile d-flex align-items-start flex-grow-1"
+                    v-for="contact in contactsList"
+                    >
+                        <div class="profile__img">
+                            <img :src="contact.avatar" alt="">
+                        </div>
+                        <div class="profile__name flex-grow-1">
+                            <div class="receiver__name fw-bold">
+                                {{ contact.name }}
+                            </div>
+                            <div class="receiver__info">
+                                Ultimo messaggio inviato
+                            </div>
+                            <div class="receiver__time">
+                                15:02
+                            </div>
+                        </div>
+                    </div>
+                    <!-- prototype card end -->
+
                 </div>
 
             </div>
@@ -85,14 +107,14 @@
 
                     <div class="user-bar__profile d-flex align-items-center flex-grow-1 px-2">
                         <div class="profile__img">
-                            <img src="./assets/woman1.png" alt="">
+                            <img src="./assets/man1.png" alt="">
                         </div>
                         <div class="profile__name">
                             <div class="receiver__name fw-bold">
                                 Michele
                             </div>
                             <div class="receiver__info">
-                                placeholder...
+                                Ultimo accesso oggi alle 12:00
                             </div>
                         </div>
                     </div>
