@@ -156,7 +156,7 @@
                     <div class="messages-container">
                         <div 
                         :class="['message__cloud', item.status === 'sent' ? 'sent__message' : 'received__message']"
-                        v-for="item in contactsList[2].messages"
+                        v-for="item in contactsList[0].messages"
                         >
                             <div class="message__text">
                                 {{ item.message }}
