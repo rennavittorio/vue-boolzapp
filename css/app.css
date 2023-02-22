@@ -1,0 +1,13 @@
+body {
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #009688 0 15%,
+        #D9DBD4 15% 100%);
+
+    display: flex;
+}
+
+.boolzap {
+    border: 3px solid #333;
+}
