@@ -9,6 +9,14 @@ body {
 
 }
 
+img {
+    max-width: 100%;
+}
+
+a {
+    color: currentColor;
+}
+
 .boolzap {
     border: 3px solid #333;
     background-color: #eee;
@@ -16,7 +24,7 @@ body {
 }
 
 .row, .col, .col-4 {
-    border: 2px dashed tomato;
+    /* border: 2px dashed tomato; */
     height: 100%;
 }
 
@@ -26,8 +34,8 @@ body {
 .chat-input {
     width: 100%;
     height: 75px;
-    background-color: #333;
-    color: #eee;
+    background-color: #eaeaea;
+    color: #333;
 }
 
 .boolzap__navbar > *,
@@ -35,4 +43,20 @@ body {
     border: 2px dashed cornflowerblue;
 }
 
+.profile__img {
+    width: 50px;
+}
+
+.notification-banner{
+    background-color: #8EDAFC;
+    color: #333;
+}
+
+.notification__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    background-color: #D9DBD4;
+    color: #8EDAFC;
+}
 
