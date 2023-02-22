@@ -103,6 +103,7 @@
 
             <div class="boolzap__chat col d-flex flex-column">
                 
+                <!-- contact profile -->
                 <div class="user-bar flex-shrink-0 d-flex align-items-center">
 
                     <div class="user-bar__profile d-flex align-items-center flex-grow-1 px-2">
@@ -133,42 +134,9 @@
 
                 </div>
 
-                <div class="chat-view flex-grow-1 overflow-y-scroll">
 
-                    <!-- prototype -->
-                    <div class="messages-container">
-                        <div class="message__cloud sent__message">
-                            <div class="message__text">
-                                Lorem ipsum dolor sit amet.
-
-                            </div>
-                            <div class="message__time">
-                                12:00
-                            </div>
-                            <div class="message__option">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-
-                        <div class="message__cloud received__message">
-                            <div class="message__text">
-                                Lorem ipsum dolor sit amet.
-
-                            </div>
-                            <div class="message__time">
-                                12:00
-                            </div>
-                            <div class="message__option">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- prototype end -->
-
-                </div>
-
-                <div class="chat-input flex-shrink-0 d-flex align-items-center p-2">
+                <!-- input chat -->
+                <div class="chat-input flex-shrink-0 d-flex align-items-center p-2 order-1">
                     <div class="lateral__icon d-flex justify-content-center align-items-center">
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
@@ -178,6 +146,45 @@
                     <div class="lateral__icon d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-microphone"></i>
                     </div>
+                </div>
+
+
+                <!-- message view -->
+                <div class="chat-view flex-grow-1 overflow-y-scroll">
+
+                    <!-- prototype -->
+                    <div class="messages-container">
+                        <div 
+                        :class="['message__cloud', item.status === 'sent' ? 'sent__message' : 'received__message']"
+                        v-for="item in contactsList[2].messages"
+                        >
+                            <div class="message__text">
+                                {{ item.message }}
+                            </div>
+                            <div class="message__time">
+                                12:00
+                            </div>
+                            <div class="message__option">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+
+                        <!-- <div class="message__cloud received__message">
+                            <div class="message__text">
+                                Lorem ipsum dolor sit amet.
+
+                            </div>
+                            <div class="message__time">
+                                12:00
+                            </div>
+                            <div class="message__option">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+
+                    </div> -->
+                    <!-- prototype end -->
+
                 </div>
 
             </div>
