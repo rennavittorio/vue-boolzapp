@@ -75,23 +75,28 @@
                     
                     <!-- prototype card -->
                     <div 
-                    class="user-bar__profile d-flex align-items-start flex-grow-1"
-                    v-for="contact in contactsList"
+                    class="user-bar__profile flex-grow-1"
+                    v-for="(contact, index) in contactsList"
                     >
-                        <div class="profile__img">
-                            <img :src="contact.avatar" alt="">
+                        <div class="profile__card d-flex align-items-start" 
+                        @click="getActiveContact(index)"
+                        >
+                            <div class="profile__img">
+                                <img :src="contact.avatar" alt="">
+                            </div>
+                            <div class="profile__name flex-grow-1">
+                                <div class="receiver__name fw-bold">
+                                    {{ contact.name }}
+                                </div>
+                                <div class="receiver__info">
+                                    Ultimo messaggio inviato
+                                </div>
+                                <div class="receiver__time">
+                                    15:02
+                                </div>
+                            </div>
                         </div>
-                        <div class="profile__name flex-grow-1">
-                            <div class="receiver__name fw-bold">
-                                {{ contact.name }}
-                            </div>
-                            <div class="receiver__info">
-                                Ultimo messaggio inviato
-                            </div>
-                            <div class="receiver__time">
-                                15:02
-                            </div>
-                        </div>
+
                     </div>
                     <!-- prototype card end -->
 
@@ -156,7 +161,7 @@
                     <div class="messages-container">
                         <div 
                         :class="['message__cloud', item.status === 'sent' ? 'sent__message' : 'received__message']"
-                        v-for="item in contactsList[0].messages"
+                        v-for="item in contactsList[activeContact].messages"
                         >
                             <div class="message__text">
                                 {{ item.message }}

@@ -171,9 +171,19 @@ createApp({
 
     return {
       contactsList: contacts,
+      activeContact: 0,
 
     }
 
-  }
+  },
+
+  methods: {
+
+
+    getActiveContact(i){
+        let currentContactIndex = i
+        this.activeContact = currentContactIndex
+    }
+  },
 
 }).mount('#app')
