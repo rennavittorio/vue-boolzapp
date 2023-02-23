@@ -194,10 +194,20 @@ createApp({
             });
             this.newMessage = '';
 
+            setTimeout(this.receiveMessage, 1000);
+
         } else {
             this.newMessage = '';
         }
     },
+
+    receiveMessage(){
+        this.contactsList[this.activeContact].messages.push({
+            date: '10/01/2020 15:51:00',
+            message: 'lesss go',
+            status: 'received'
+        });
+    }
 
 
   },
