@@ -81,7 +81,7 @@
                     
                     <!-- prototype card -->
                     <div 
-                    :class="['user-bar__profile', 'flex-grow-1', activeContact === index ? 'active' : '']"
+                    :class="['user-bar__profile', 'flex-grow-1', activeContact === index ? 'active' : '', contact.visible === true ? 'd-block' : 'd-none']"
                     v-for="(contact, index) in contactsList"
                     >
                         <div class="profile__card d-flex align-items-start" 

@@ -220,20 +220,18 @@ createApp({
 
     getFilteredContactList(){
 
-        let filter = []
         let inputToArray = this.searchInput.toLowerCase();
         console.log('user input: ', inputToArray);
 
         this.contactsList.forEach((el)=>{
             let name = el.name.toLowerCase()
             if(name.includes(inputToArray)){
-                filter.push(el.name);
+                el.visible = true;
+            } else {
+                el.visible = false;
             }
 
         })
-
-        this.filteredList = filter;
-        console.log(this.filteredList);
 
     }
 
