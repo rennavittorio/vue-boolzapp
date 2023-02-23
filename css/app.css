@@ -1,3 +1,5 @@
+
+/* general rules */
 body {
     height: 100vh;
     background: linear-gradient(
@@ -68,13 +70,20 @@ i:not(.notification__icon>i) {
 }
 
 .chat__navbar {
-    padding: 15px 10px;
     background-color: #fff;
 }
 
 .chat__navbar .user-bar__profile {
-    padding: 10px 0;
+    padding: 15px 10px;
     background-color: #fff;
+}
+
+.chat__navbar .user-bar__profile:hover {
+    background-color: #eee;
+}
+
+.chat__navbar .user-bar__profile.active {
+    background-color: #ddd;
 }
 
 .chat__navbar .profile__img {
@@ -94,8 +103,8 @@ i:not(.notification__icon>i) {
 
 .chat-view {
     background-image: url(../assets/wa_bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 /* messages */
@@ -107,12 +116,13 @@ i:not(.notification__icon>i) {
 
 
 .message__cloud {
-    padding: 20px 20px 50px;
+    padding: 10px 75px 35px 10px;
     margin: 40px;
     border-radius: 15px;
     box-shadow: 5px 5px 20px #D9DBD4;
     background-color: #fff;
-    width: 300px;
+    width: fit-content;
+    max-width: 300px;
     position: relative;
 }
 

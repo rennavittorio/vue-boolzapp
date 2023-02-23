@@ -172,6 +172,7 @@ createApp({
     return {
       contactsList: contacts,
       activeContact: 0,
+      newMessage: '',
 
     }
 
@@ -179,11 +180,26 @@ createApp({
 
   methods: {
 
-
     getActiveContact(i){
         let currentContactIndex = i
         this.activeContact = currentContactIndex
-    }
+    },
+
+    sendMessage(){
+        if (this.newMessage.trim() !== ''){
+            this.contactsList[this.activeContact].messages.push({
+                date: '10/01/2020 15:51:00',
+                message: this.newMessage,
+                status: 'sent'
+            });
+            this.newMessage = '';
+
+        } else {
+            this.newMessage = '';
+        }
+    },
+
+
   },
 
 }).mount('#app')
