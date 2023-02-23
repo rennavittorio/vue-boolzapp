@@ -149,6 +149,11 @@ i:not(.notification__icon>i) {
     position: absolute;
     top: 10px;
     right: 10px;
+
+}
+
+.message__cloud:hover .message__option {
+    display: block;
 }
 
 .sent__message {
