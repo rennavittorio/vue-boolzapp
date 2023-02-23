@@ -172,7 +172,6 @@ createApp({
     return {
       contactsList: contacts , //array di oggetti
       activeContact: 0,
-      filteredContacts: [],
       newMessage: '',
       searchInput: '',
 
@@ -233,6 +232,10 @@ createApp({
 
         })
 
+    },
+
+    getMessagesLastIndex(contact){
+        return contact.messages.length - 1
     }
 
   },

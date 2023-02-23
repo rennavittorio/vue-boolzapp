@@ -95,7 +95,7 @@
                                     {{ contact.name }}
                                 </div>
                                 <div class="receiver__info">
-                                    Ultimo messaggio inviato
+                                    {{ contact.messages[getMessagesLastIndex(contact)].message }}
                                 </div>
                                 <div class="receiver__time">
                                     15:02

@@ -91,10 +91,19 @@ i:not(.notification__icon>i) {
 .chat__navbar .profile__img {
     width: 75px;
     margin-right: 10px;
+    flex-shrink: 0;
 }
 
 .chat__navbar .profile__name {
     position: relative;
+}
+
+.receiver__info {
+    /* wrappa il testo e ne riporta solo una parte */
+    white-space: nowrap; 
+    width: 200px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .chat__navbar .receiver__time {
@@ -118,7 +127,6 @@ i:not(.notification__icon>i) {
     height: 100%;
 
 }
-
 
 .message__cloud {
     padding: 10px 75px 35px 10px;
