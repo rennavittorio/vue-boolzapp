@@ -187,28 +187,34 @@ createApp({
 
     sendMessage(){
         if (this.newMessage.trim() !== ''){
-            this.contactsList[this.activeContact].messages.push({
+            let indexContactsClicked = [];
+            indexContactsClicked.push(this.activeContact);
+            let senderIndex = indexContactsClicked[0];
+            console.log('out function', senderIndex)
+
+            this.contactsList[senderIndex].messages.push({
                 date: '10/01/2020 15:51:00',
                 message: this.newMessage,
                 status: 'sent'
             });
-            this.newMessage = '';
 
-            setTimeout(this.receiveMessage, 1000);
+
+            setTimeout(()=>{
+                this.contactsList[senderIndex].messages.push({
+                    date: '10/01/2020 15:51:00',
+                    message: 'lesss go',
+                    status: 'received'
+                });
+
+            }, 3000)
+
+            this.newMessage = '';
+            indexContactsClicked = [];
 
         } else {
             this.newMessage = '';
         }
     },
-
-    receiveMessage(){
-        this.contactsList[this.activeContact].messages.push({
-            date: '10/01/2020 15:51:00',
-            message: 'lesss go',
-            status: 'received'
-        });
-    }
-
 
   },
 
