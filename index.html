@@ -81,7 +81,7 @@
                     v-for="(contact, index) in contactsList"
                     >
                         <div class="profile__card d-flex align-items-start" 
-                        @click="getActiveContact(index)"
+                        @click="setActiveContact(index)"
                         >
                             <div class="profile__img">
                                 <img :src="contact.avatar" alt="">

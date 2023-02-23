@@ -180,7 +180,7 @@ createApp({
 
   methods: {
 
-    getActiveContact(i){
+    setActiveContact(i){
         let currentContactIndex = i
         this.activeContact = currentContactIndex
     },
