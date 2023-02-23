@@ -165,9 +165,10 @@
 
                 <!-- message view -->
                 <div class="chat-view flex-grow-1 overflow-y-scroll">
-
+                        
                     <!-- prototype -->
-                    <div class="messages-container">
+                    <div class="messages-container d-flex flex-column justify-content-end">
+
                         <div 
                         :class="['message__cloud', item.status === 'sent' ? 'sent__message' : 'received__message']"
                         v-for="item in contactsList[activeContact].messages"
@@ -177,18 +178,10 @@
                             </div>
                             <div class="message__time">
                                 12:00
-                                <i class="fa-solid fa-chevron-down"></i>
+                                
                             </div>
-                            <div class="dropdown">
-                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown link
-                                </a>
-                              
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
+                            <div class="message__option">
+                                <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
 
