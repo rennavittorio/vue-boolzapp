@@ -170,9 +170,11 @@ createApp({
   data() {
 
     return {
-      contactsList: contacts,
+      contactsList: contacts , //array di oggetti
       activeContact: 0,
+      filteredContacts: [],
       newMessage: '',
+      searchInput: '',
 
     }
 
@@ -215,6 +217,25 @@ createApp({
             this.newMessage = '';
         }
     },
+
+    getFilteredContactList(){
+
+        let filter = []
+        let inputToArray = this.searchInput.toLowerCase();
+        console.log('user input: ', inputToArray);
+
+        this.contactsList.forEach((el)=>{
+            let name = el.name.toLowerCase()
+            if(name.includes(inputToArray)){
+                filter.push(el.name);
+            }
+
+        })
+
+        this.filteredList = filter;
+        console.log(this.filteredList);
+
+    }
 
   },
 
