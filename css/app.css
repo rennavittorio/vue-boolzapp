@@ -129,7 +129,7 @@ i:not(.notification__icon>i) {
 }
 
 .message__cloud {
-    padding: 10px 75px 35px 10px;
+    padding: 10px 50px 35px 10px;
     margin: 40px;
     border-radius: 15px;
     box-shadow: 5px 5px 20px #D9DBD4;
@@ -137,11 +137,12 @@ i:not(.notification__icon>i) {
     width: fit-content;
     max-width: 300px;
     position: relative;
+
 }
 
-.message__cloud:first-child {
+/* .message__cloud:first-child {
     margin-top: auto;
-}
+} */
 
 .message__cloud .message__time {
     position: absolute;
@@ -166,5 +167,5 @@ i:not(.notification__icon>i) {
 }
 
 .message__text {
-    word-wrap: ;
+    word-wrap: break-word;
 }

@@ -164,14 +164,20 @@
 
 
                 <!-- message view -->
-                <div class="chat-view flex-grow-1 overflow-y-scroll">
+                <div 
+                class="chat-view flex-grow-1 overflow-hidden"
+                ref="chat"
+                >
                         
                     <!-- prototype -->
-                    <div class="messages-container d-flex flex-column">
+                    <div class="messages-container d-flex flex-column overflow-y-scroll">
+                        <!-- 1. prendere elemento da DOM... ref="" -->
+                        <!-- 2. creare una funzione di autoscroll in fondo -->
+                        <!-- 3. settare scroll dopo aggiornamento DOM con metodo $nextTick (VUE) -->
 
                         <div 
                         :class="['message__cloud', item.status === 'sent' ? 'sent__message' : 'received__message']"
-                        v-for="item in contactsList[activeContact].messages"
+                        v-for="(item, i) in [...contactsList[activeContact].messages]"
                         >
                             <div class="message__text">
                                 {{ item.message }}

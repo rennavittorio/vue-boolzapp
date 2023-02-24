@@ -240,4 +240,8 @@ createApp({
 
   },
 
+  mounted(){
+    console.log(this.$refs)
+  },
+
 }).mount('#app')
