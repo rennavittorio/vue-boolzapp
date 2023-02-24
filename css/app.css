@@ -139,6 +139,10 @@ i:not(.notification__icon>i) {
     position: relative;
 }
 
+.message__cloud:first-child {
+    margin-top: auto;
+}
+
 .message__cloud .message__time {
     position: absolute;
     bottom: 10px;
@@ -161,3 +165,6 @@ i:not(.notification__icon>i) {
     background-color: #D5F9BA;
 }
 
+.message__text {
+    word-wrap: ;
+}
