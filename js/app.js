@@ -174,7 +174,7 @@ createApp({
       activeContact: 0,
       newMessage: '',
       searchInput: '',
-
+      activeOption: undefined,
     }
 
   },
@@ -236,6 +236,16 @@ createApp({
 
     getMessagesLastIndex(contact){
         return contact.messages.length - 1
+    },
+
+    setActiveOption(i){
+        if (this.activeOption === undefined){
+            let activeOptionIndex = i;
+            this.activeOption = activeOptionIndex;
+
+        } else {
+            this.activeOption = undefined;
+        }
     }
 
   },
