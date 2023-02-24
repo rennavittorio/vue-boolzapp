@@ -179,6 +179,15 @@ createApp({
 
   },
 
+  watch: {
+    activeContact(newIndex, oldIndex){
+        let check = newIndex === oldIndex;
+        if (check === false){
+            this.activeOption = undefined;
+        }
+    }
+  },
+
   methods: {
 
     setActiveContact(i){
@@ -234,10 +243,12 @@ createApp({
 
     },
 
+
     getMessagesLastIndex(contact){
         return contact.messages.length - 1
     },
 
+    
     setActiveOption(i){
         if (this.activeOption === undefined){
             let activeOptionIndex = i;
@@ -246,6 +257,8 @@ createApp({
         } else {
             this.activeOption = undefined;
         }
+
+        
     }
 
   },
