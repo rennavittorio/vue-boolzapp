@@ -175,6 +175,7 @@ createApp({
       newMessage: '',
       searchInput: '',
       activeOption: undefined,
+      activeLike: undefined,
     }
 
   },
@@ -256,6 +257,18 @@ createApp({
 
         } else {
             this.activeOption = undefined;
+        }
+
+        
+    },
+
+    setActiveLike(i){
+        if (this.activeLike === undefined){
+            let activeLikeIndex = i;
+            this.activeLike = activeLikeIndex;
+
+        } else {
+            this.activeLike = undefined;
         }
 
         

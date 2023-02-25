@@ -136,15 +136,33 @@ i:not(.notification__icon>i) {
 
 .message__cloud {
     padding: 10px 50px 35px 10px;
-    margin: 40px;
+    margin: 20px;
     border-radius: 15px;
     box-shadow: 5px 5px 20px #D9DBD4;
     background-color: #fff;
     width: fit-content;
     max-width: 300px;
     position: relative;
-
 }
+
+.message__layer {
+    position: absolute;
+    width: 50px;
+    padding: 20px;
+    background-color: white;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sent__message .message__layer {
+    right: 100%;
+}
+
+.received__message .message__layer {
+    left: 100%;
+}
+
 
 /* .message__cloud:first-child {
     margin-top: auto;
@@ -195,6 +213,55 @@ i:not(.notification__icon>i) {
 }
 
 .message__menu > *:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+
+.message__cloud .emoji__option {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    z-index: 999;
+
+    display: block;
+
+}
+
+.message__cloud.sent__message .emoji__option {
+    left: -25px;
+    width: fit-content;
+}
+
+.message__cloud .message__layer:hover .emoji__option {
+    display: block;
+    color: #333;
+    cursor: pointer;
+}
+
+.emoji__menu {
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px #D9DBD4;
+
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    transform: translateY(-50%);
+}
+
+.message__cloud.sent__message .emoji__menu {
+    left: -150px;
+    width: fit-content;
+}
+
+.emoji__menu > * {
+    padding: 10px 20px;
+}
+
+.emoji__menu > *:hover {
     background-color: #eee;
     cursor: pointer;
 }
