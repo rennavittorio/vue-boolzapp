@@ -195,7 +195,7 @@
                             :class="['message__menu', activeOption === i ? 'd-block' : 'd-none']"
                             >
                                 <li>Info</li>
-                                <li>Delete</li>
+                                <li @click="deleteMessage(i)">Delete</li>
                             </ul>
                         </div>
 

@@ -87,6 +87,7 @@ i:not(.notification__icon>i) {
 
 .chat__navbar .user-bar__profile:hover {
     background-color: #eee;
+    cursor: pointer;
 }
 
 .chat__navbar .user-bar__profile.active {
@@ -160,10 +161,13 @@ i:not(.notification__icon>i) {
     top: 10px;
     right: 10px;
 
+    display: none;
+
 }
 
 .message__cloud:hover .message__option {
     display: block;
+    cursor: pointer;
 }
 
 .sent__message {
@@ -176,8 +180,11 @@ i:not(.notification__icon>i) {
 }
 
 .message__menu {
-    background-color: #333;
-    color: #ddd;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px #D9DBD4;
+
     position: absolute;
     top: 30px;
     right: 10px;
@@ -185,4 +192,9 @@ i:not(.notification__icon>i) {
 
 .message__menu > * {
     padding: 10px 20px;
+}
+
+.message__menu > *:hover {
+    background-color: #eee;
+    cursor: pointer;
 }

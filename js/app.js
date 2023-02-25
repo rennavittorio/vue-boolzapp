@@ -248,7 +248,7 @@ createApp({
         return contact.messages.length - 1
     },
 
-    
+
     setActiveOption(i){
         if (this.activeOption === undefined){
             let activeOptionIndex = i;
@@ -259,6 +259,12 @@ createApp({
         }
 
         
+    },
+
+    deleteMessage(i){
+        let activeContact = this.activeContact
+        this.contactsList[activeContact].messages.splice(i, 1);
+        this.activeOption = undefined;
     }
 
   },
